@@ -1,0 +1,17 @@
+// Import abstracts
+@use "abstracts/variables";
+@use "abstracts/assets";
+
+// Import base
+@use "base/base";
+
+// Import components
+@use "components/header";
+@use "components/booking-details";
+@use "components/car-card";
+@use "components/add-ons";
+@use "components/insurance";
+@use "components/breadcrumb";
+@use "components/order-confirmation";
+@use "components/contact-us";
+@use "components/footer";

@@ -1,0 +1,131 @@
+.add-ons {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-self: stretch;
+  flex-grow: 0;
+  flex-shrink: 0;
+  gap: 32px;
+  padding-top: 16px;
+  border-top: 1px solid #4f4f51;
+
+  &__header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 0;
+    flex-shrink: 0;
+    gap: 8px;
+  }
+
+  &__title {
+    flex-grow: 0;
+    flex-shrink: 0;
+    font-size: 24px;
+    text-align: left;
+    color: #fefeff;
+    margin: 0;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-self: stretch;
+    flex-grow: 0;
+    flex-shrink: 0;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 294px;
+    height: 77px;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #39393b;
+
+    &--active {
+      background: #b68867;
+
+      .add-ons__item-action {
+        background: #c5a085;
+      }
+    }
+  }
+
+  &__item-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 260px;
+    gap: 8px;
+    padding: 8px 16px 8px 8px;
+  }
+
+  &__item-icon {
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+  }
+
+  &__item-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-self: stretch;
+    flex-grow: 1;
+    padding-left: 16px;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  &__item-name {
+    align-self: stretch;
+    flex-grow: 1;
+    width: 188px;
+    height: 37px;
+    font-size: 16px;
+    text-align: left;
+    color: #fefeff;
+    margin: 0;
+  }
+
+  &__item-price {
+    flex-grow: 0;
+    flex-shrink: 0;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: left;
+    color: #fefeff;
+    margin: 0;
+  }
+
+  &__item-action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+    flex-grow: 1;
+    gap: 10px;
+    background: #4f4f51;
+  }
+
+  &__item-action-icon {
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 24px;
+    height: 24px;
+  }
+}

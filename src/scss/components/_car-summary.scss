@@ -1,0 +1,82 @@
+@use "../abstracts/variables" as *;
+
+.car-summary {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 393px;
+  position: relative;
+  gap: 16px;
+  padding: 8px 16px 16px;
+
+  &__image-container {
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 72px;
+    height: 72px;
+    position: relative;
+    border-radius: 4px;
+    background: $background-color;
+  }
+
+  &__image {
+    width: 74px;
+    height: 48px;
+    position: absolute;
+    left: -2px;
+    top: 11px;
+    object-fit: none;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-grow: 1;
+    position: relative;
+    gap: 4px;
+  }
+
+  &__title {
+    align-self: stretch;
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 273px;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: left;
+    color: $text-color;
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 148px;
+    position: relative;
+  }
+
+  &__category {
+    align-self: stretch;
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 148px;
+    font-size: 14px;
+    text-align: left;
+    color: $text-secondary;
+  }
+
+  &__duration {
+    align-self: stretch;
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 148px;
+    font-size: 14px;
+    text-align: left;
+    color: $text-color;
+  }
+}

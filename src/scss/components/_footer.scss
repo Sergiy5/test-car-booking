@@ -1,0 +1,181 @@
+@use "../abstracts/variables" as *;
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  gap: 64px;
+  padding: 64px 0 48px;
+  background: #121214;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 1464px;
+    gap: 48px;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  &__brand {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__logo-container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  &__logo {
+    width: 126px;
+    height: 15px;
+  }
+
+  &__tagline {
+    font-size: 16px;
+    color: $gray-text;
+  }
+
+  &__subscribe {
+    display: flex;
+    align-items: flex-end;
+    gap: 16px;
+  }
+
+  &__email-container {
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    gap: 6px;
+  }
+
+  &__email-label {
+    display: flex;
+    gap: 2px;
+  }
+
+  &__label-text {
+    font-size: 14px;
+    color: $gray-text;
+  }
+
+  &__email-input {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    font-size: 16px;
+    color: $gray-text;
+    height: 48px;
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1px solid $button-bg;
+    background: transparent;
+    filter: drop-shadow(0px 1px 2px rgba(16, 24, 40, 0.05));  
+  }
+
+  &__subscribe-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    background: rgba(182, 136, 103, 0.2);
+    border: none;
+    cursor: pointer;
+  }
+
+  &__button-text {
+    font-size: 16px;
+    color: $text-color;
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 32px;
+  }
+
+  &__copyright {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 32px;
+    border-top: 1px solid $border-color;
+  }
+
+  &__copyright-text {
+    font-size: 16px;
+    color: $gray-text;
+  }
+
+  &__links {
+    display: flex;
+    gap: 16px;
+  }
+
+  &__link {
+    font-size: 16px;
+    color: $gray-text;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $text-color;
+    }
+  }
+}
+
+// Responsive styles
+@media (max-width: 1600px) {
+  .footer {
+    &__content {
+      width: 90%;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .footer {
+    &__top {
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    &__subscribe {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 48px 0 32px;
+    gap: 48px;
+
+    &__content {
+      width: 100%;
+      padding: 0 24px;
+    }
+
+    &__copyright {
+      flex-direction: column;
+      gap: 16px;
+      text-align: center;
+    }
+  }
+}

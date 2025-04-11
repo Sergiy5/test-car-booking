@@ -1,0 +1,129 @@
+@use "../abstracts/variables" as *;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 16px 40px;
+  background: #1e1e20;
+
+  &__left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 84px;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    height: 15px;
+    width: 126px;
+    color: $text-color;
+  }
+
+  &__nav {
+    display: flex;
+    gap: 24px;
+    @media (max-width: 1180px) {
+      display: none;
+    }
+  }
+
+  &__nav-link {
+    font-size: 16px;
+    color: $text-color;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $text-color;
+    }
+  }
+
+  &__right {
+    display: flex;
+    gap: 16px;
+  }
+
+  &__action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    background: transparent;
+    border: none;
+    color: $text-color;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  &__action-text {
+    font-size: 16px;
+    color: $secondary-text;
+  }
+  &__action-text--language {
+    @media (max-width: 1180px) {
+      display: none;
+    }
+
+  }
+
+  &__action-text--phone {
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+  .icon {
+    width: 24px;
+    height: 24px;
+    color: $text-color;
+  }
+  &__action--sign-in {
+    display: flex;
+    @media (max-width: 1180px) {
+      display: none;
+    }
+  }
+  &__action--burger-menu {
+    display: none;
+    @media (max-width: 1180px) {
+      display: flex;
+    }
+  }
+}
+
+// Responsive styles
+@media (max-width: 1180px) {
+  .header {
+    &__left {
+      gap: 40px;
+    }
+
+    &__nav {
+      gap: 16px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 16px 24px;
+
+    &__left {
+      gap: 24px;
+    }
+
+    &__nav {
+      display: none;
+    }
+  }
+}

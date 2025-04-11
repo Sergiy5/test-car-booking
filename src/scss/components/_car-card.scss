@@ -1,0 +1,162 @@
+@use "../abstracts/variables" as *;
+
+
+.car-card {
+  height: 343px;
+  display: flex;
+  gap: 40px;
+  align-self: stretch;
+  // flex-grow: 0;
+  // flex-shrink: 0;
+  // @media (max-width: 1200px) {
+  //   flex-direction: column;
+  //   height: auto;
+  // }
+
+  &__image-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__image-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 621px;
+    height: auto;
+  }
+
+  &__image {
+    max-width: 460px;
+    min-width: 361px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    z-index: 2;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 400px;
+    width: 100%;
+    left: 0;
+    top: 0;
+    gap: 32px;
+    z-index: 3;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    // align-self: stretch;
+    gap: 16px;
+    max-width: 320px;
+    width: 100%;
+  }
+
+  &__title {
+    width: 100%;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 100%;
+    text-align: left;
+    text-transform: capitalize;
+    color: $text-color;
+    margin: 0;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 8px;
+
+    &-amount {
+      font-size: 24px;
+      line-height: 120%;
+      color: $text-color;
+    }
+
+    &-currency {
+      margin-bottom: 3px;
+      font-size: 16px;
+      line-height: 100%;
+      color: $text-color;
+    }
+  }
+
+  &__features {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 120%;
+    width: 160px;
+    gap: 16px;
+  }
+
+  &__features-title {
+    font-size: 20px;
+    color: $text-color;
+    margin: 0;
+  }
+
+  &__features-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__feature {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__feature-icon {
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+  }
+
+  &__specs {
+    display: grid;
+    grid-template-columns: repeat(2, 142px);
+    grid-template-rows: repeat(2, 30px);
+  }
+
+  &__spec {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    border-radius: 100px;
+  }
+
+  &__spec-icon {
+    flex-shrink: 0;
+    color: $text-color;
+    width: 16px;
+    height: 16px;
+  }
+}

@@ -1,0 +1,101 @@
+@use "../abstracts/variables" as *;
+
+.progress-indicator {
+  width: 393px;
+  height: 46px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__step {
+    width: 98px;
+    height: 46px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &--active {
+      .progress-indicator__icon-circle {
+        fill: $primary-color-light;
+      }
+
+      .progress-indicator__step-label {
+        color: $text-secondary;
+      }
+    }
+
+    &--current {
+      .progress-indicator__icon-circle {
+        fill: $primary-color;
+        fill-opacity: 0.2;
+
+        &:last-child {
+          fill: none;
+          stroke: $text-color;
+        }
+      }
+
+      .progress-indicator__step-label {
+        color: $text-secondary;
+      }
+    }
+  }
+
+  &__line {
+    position: absolute;
+    top: 11px;
+
+    &--left {
+      left: -1px;
+    }
+
+    &--right {
+      left: 48px;
+    }
+  }
+
+  &__step-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 98px;
+    position: absolute;
+    left: 0;
+    gap: 7px;
+  }
+
+  &__icon-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    gap: 6px;
+  }
+
+  &__icon-circle {
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+
+  &__icon-check {
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    width: 16px;
+    height: 16px;
+  }
+
+  &__step-label {
+    align-self: stretch;
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 98px;
+    font-size: 12px;
+    text-align: center;
+    color: $text-secondary;
+    font-weight: 300;
+  }
+}

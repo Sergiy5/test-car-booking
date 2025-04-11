@@ -1,0 +1,38 @@
+@use "variables" as *;
+
+// Asset paths
+$assets-path: "/src/assets";
+$images-path: "#{$assets-path}/images";
+$icons-path: "#{$assets-path}/icons";
+
+// Mixins for assets
+@mixin background-image($path, $size: cover, $position: center) {
+  background-image: url("#{$images-path}/#{$path}");
+  background-size: $size;
+  background-position: $position;
+  background-repeat: no-repeat;
+}
+
+@mixin icon($name, $width: 24px, $height: 24px) {
+  width: $width;
+  height: $height;
+  background-image: url("#{$icons-path}/#{$name}.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+// Utility classes for common assets
+.icon {
+  &--menu {
+    @include icon("ui/menu", 24px, 24px);
+  }
+
+  &--search {
+    @include icon("ui/search", 24px, 24px);
+  }
+
+  &--logo {
+    @include icon("brand/logo", 126px, 15px);
+  }
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Rental App</title>
+    <link rel="stylesheet" href="./src/scss/main.scss" />
+  </head>
+  <body>
+    <!-- Header -->
+    <div data-include="./src/partials/header.html"></div>
+
+    <div id="app" class="page-wrapper" >
+
+      <!-- Breadcrumb -->
+      <div data-include="./src/partials/breadcrumb.html"></div>
+
+      <!-- Booking Details -->
+      <div class="main-wrapper" >
+        <div data-include="./src/partials/booking-details.html"></div>
+        <div data-include="./src/partials/order-confirmation.html"></div>
+      </div>
+
+      <!-- Contact Us -->
+      <div data-include="./src/partials/contact-us.html"></div>
+    </div>
+    <!-- Footer -->
+    <div data-include="./src/partials/footer.html"></div>
+    <script type="module" src="./src/js/main.js"></script>
+  </body>
+</html>
